@@ -106,12 +106,3 @@ Chương trình sẽ hiển thị:
 4. Danh sách chi tiết tất cả sản phẩm
 5. Tìm kiếm sản phẩm theo mã
 6. Danh sách sản phẩm có số lượng thấp
-
-## Mở rộng có thể thực hiện
-
-- Thêm giao diện người dùng (GUI)
-- Lưu trữ dữ liệu vào file/cơ sở dữ liệu
-- Thêm chức năng báo cáo xuất/nhập kho
-- Thêm chức năng quản lý nhân viên
-- Thêm chức năng quản lý khách hàng
-- Thêm các tiêu chí đánh giá tiêu thụ khác

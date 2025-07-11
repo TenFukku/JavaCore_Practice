@@ -1,5 +1,5 @@
 public class Truck extends Vehicle {
-    private double tonnage; // in tons
+    private double tonnage;
     
     public Truck(String vehicleNumber, String manufacturer, int yearOfManufacture, 
                  String vehicleColor, VehicleOwner owner, double tonnage) {

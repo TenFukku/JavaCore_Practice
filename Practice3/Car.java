@@ -9,7 +9,6 @@ public class Car extends Vehicle {
         this.engineType = engineType;
     }
     
-    // Getters and Setters
     public int getNumberOfSeats() {
         return numberOfSeats;
     }
@@ -31,7 +30,6 @@ public class Car extends Vehicle {
         return "Ô tô";
     }
     
-    // Method to determine car category based on number of seats
     public String getCarCategory() {
         if (numberOfSeats <= 5) {
             return "Xe con";

@@ -114,4 +114,22 @@ public class InventoryManager {
                       .filter(product -> product.getInventoryQuantity() < 10)
                       .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
     }
+    
+    public void displayConsumptionStatus() {
+        System.out.println("=== ĐÁNH GIÁ MỨC TIÊU THỤ ===");
+        
+        for (Product product : products) {
+            System.out.println("Mã SP: " + product.getProductCode() + 
+                             " | Tên: " + product.getName() + 
+                             " | Số lượng: " + product.getInventoryQuantity() +
+                             " | Đánh giá: " + product.getConsumptionStatus());
+        }
+        System.out.println();
+    }
+    
+    public List<Product> getProductsByConsumptionStatus(String status) {
+        return products.stream()
+                      .filter(product -> product.getConsumptionStatus().equals(status))
+                      .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+    }
 } 

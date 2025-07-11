@@ -55,6 +55,14 @@ public class Electronics extends Product {
     }
     
     @Override
+    public String getConsumptionStatus() {
+        if (inventoryQuantity < 3) {
+            return "Đã bán (số lượng < 3)";
+        }
+        return "Không đánh giá";
+    }
+    
+    @Override
     public void displayInfo() {
         System.out.println("=== THÔNG TIN HÀNG ĐIỆN TỬ ===");
         super.displayInfo();

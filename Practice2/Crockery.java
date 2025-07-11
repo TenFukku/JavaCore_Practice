@@ -37,6 +37,14 @@ public class Crockery extends Product {
     }
     
     @Override
+    public String getConsumptionStatus() {
+        if (inventoryQuantity > 50 && getDaysSinceArrival() > 10) {
+            return "Bán chậm (số lượng > 50 và lưu kho > 10 ngày)";
+        }
+        return "Không đánh giá";
+    }
+    
+    @Override
     public void displayInfo() {
         System.out.println("=== THÔNG TIN ĐỒ GỐM ===");
         super.displayInfo();

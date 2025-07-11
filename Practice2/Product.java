@@ -54,6 +54,8 @@ public abstract class Product {
         return (unitPrice * inventoryQuantity) * (1 + getVAT());
     }
     
+    public abstract String getConsumptionStatus();
+    
     public void displayInfo() {
         System.out.println("Mã SP: " + productCode);
         System.out.println("Tên SP: " + name);
@@ -61,5 +63,6 @@ public abstract class Product {
         System.out.println("Đơn giá: " + unitPrice + " VNĐ");
         System.out.println("Thuế VAT: " + (getVAT() * 100) + "%");
         System.out.println("Tổng giá trị (có VAT): " + getTotalValue() + " VNĐ");
+        System.out.println("Đánh giá tiêu thụ: " + getConsumptionStatus());
     }
 } 

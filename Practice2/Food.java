@@ -61,6 +61,14 @@ public class Food extends Product {
     }
     
     @Override
+    public String getConsumptionStatus() {
+        if (inventoryQuantity > 0 && isExpired()) {
+            return "Khó bán (đã hết hạn)";
+        }
+        return "Không đánh giá";
+    }
+    
+    @Override
     public void displayInfo() {
         System.out.println("=== THÔNG TIN THỰC PHẨM ===");
         super.displayInfo();

@@ -49,6 +49,27 @@ public class Main {
         
         System.out.println("=".repeat(50));
         
+        manager.displayConsumptionStatus();
+        
+        System.out.println("=".repeat(50));
+        
+        System.out.println("Sản phẩm đã bán (số lượng < 3):");
+        for (Product product : manager.getProductsByConsumptionStatus("Đã bán (số lượng < 3)")) {
+            System.out.println("- " + product.getName() + " (Mã: " + product.getProductCode() + ")");
+        }
+        
+        System.out.println("\nSản phẩm khó bán (đã hết hạn):");
+        for (Product product : manager.getProductsByConsumptionStatus("Khó bán (đã hết hạn)")) {
+            System.out.println("- " + product.getName() + " (Mã: " + product.getProductCode() + ")");
+        }
+        
+        System.out.println("\nSản phẩm bán chậm (số lượng > 50 và lưu kho > 10 ngày):");
+        for (Product product : manager.getProductsByConsumptionStatus("Bán chậm (số lượng > 50 và lưu kho > 10 ngày)")) {
+            System.out.println("- " + product.getName() + " (Mã: " + product.getProductCode() + ")");
+        }
+        
+        System.out.println("\n" + "=".repeat(50));
+        
         manager.displayAllProducts();
         
         System.out.println("=".repeat(50));
